@@ -1,5 +1,10 @@
 // 命令行程序 （https://dart.dev/tutorials/server/cmdline）
+//dart pub get
+//创建一个 pubspec （一个名为 pubspec.yaml 文件，文件列出依赖的包以及包含的其他元数据，比如当前包的版本）。
 
+//使用 dart pub get 获取当前所依赖的包。
+
+//如果当前 Dart 代码依赖包中的某个库，导入（import）该库。
 import 'dart:convert';
 import 'dart:io';
 
