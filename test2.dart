@@ -1,8 +1,8 @@
 // brew tap dart-lang/dart && brew install dart
 // dart run ./00_helloworld
 void main(List<String> args) {
-  myVar();
-  //default_value();
+  //myVar();
+  default_value();
 }
 void myVar()
 {
@@ -15,6 +15,7 @@ name 变量的类型被推断为 String，但是你可以为其指定类型。�
   print(name);
 }
  void default_value(){
+  /*在 Dart 中，未初始化以及可空类型的变量拥有一个默认的初始值 null。（如果你未迁移至 空安全，所有变量都为可空类型。）即便数字也是如此，因为在 Dart 中一切皆为对象，数字也不例外。*/
   int? lineCount;
   assert(lineCount == null);
   print(lineCount);
