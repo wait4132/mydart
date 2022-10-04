@@ -1,4 +1,6 @@
 import 'dart:math';
+import 'dart:async';
+import 'dart:io';
 
 // 数字、集合、字符串等（https://dart.cn/guides/libraries/library-tour#dartcore---numbers-collections-strings-and-more）
 void dartcore_numbers_numbers_collections_strings_and_more() {
@@ -418,7 +420,17 @@ void math_and_random() {
 
 // 服务器和命令行应用程序的 I/O（https://dart.cn/guides/libraries/library-tour#dartio）
 // TODO: 自学，下周详细讲
-
+void dartasync_future_stream()
+{
+  Future result = 1;
+result
+    .then((_) => print('Done2!'))
+    .then((_) => print('Done3!'))
+    .then((_) => print('Done4!'))
+    .catchError((exception) {
+  /* Handle exception... */
+});
+}
 void main(List<String> args) {
   // 数字、集合、字符串等
   dartcore_numbers_numbers_collections_strings_and_more();
@@ -433,4 +445,5 @@ void main(List<String> args) {
   math_and_random();
 
   print('done.');
+  dartasync_future_stream();
 }
