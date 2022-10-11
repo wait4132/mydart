@@ -422,27 +422,31 @@ void math_and_random() {
 // TODO: 自学，下周详细讲
 void dartasync_future_stream()
 {
-  Future result = 1;
-result
-    .then((_) => print('Done2!'))
-    .then((_) => print('Done3!'))
-    .then((_) => print('Done4!'))
-    .catchError((exception) {
-  /* Handle exception... */
+ var config = File('test.txt');
+Stream<List<int>> inputStream = config.openRead();
+
+inputStream.transform(utf8.decoder).transform(const LineSplitter()).listen(
+    (String line) {
+  print('Got ${line.length} characters from stream');
+}, onDone: () {
+  print('file is now closed');
+}, onError: (e) {
+  print(e);
 });
+
 }
 void main(List<String> args) {
   // 数字、集合、字符串等
-  dartcore_numbers_numbers_collections_strings_and_more();
+  //dartcore_numbers_numbers_collections_strings_and_more();
 
   // 集合
-  collections();
+  //collections();
 
   // 时间和日期
-  dates_and_times();
+  //dates_and_times();
 
   // 数学和随机数
-  math_and_random();
+  //math_and_random();
 
   print('done.');
   dartasync_future_stream();
