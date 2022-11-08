@@ -1,1 +1,2 @@
 //dart pub get
+//brew tap dart-lang/dart && brew install dart
